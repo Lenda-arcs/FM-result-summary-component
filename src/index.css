@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Variable Font*/
+@font-face {
+    font-family: "Hanken Grotestk VF";
+    src: local("Hanken Grotestk"), url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+
+/*Static Font*/
+@font-face {
+    font-family: "Hanken Grotestk";
+    src: local("Hanken Grotestk"), url("../assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Hanken Grotestk";
+    src: local("Hanken Grotestk"), url("../assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Hanken Grotestk";
+    src: local("Hanken Grotestk"), url("../assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+}
+
+
+body {
+    font-family: 'Hanken Grotestk', sans-serif;
+    color: hsl(241, 100%, 89%);
+
+}
+p {
+    font-size: 18px;
+    font-weight: 500;
+}
+.bold {
+    font-weight: 700;
+}
+.extra-bold {
+    font-weight: 800;
+}
+
+
+button {
+    background: hsl(224, 30%, 27%);
+}
+button:hover {
+    background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+}
+
+@supports (font-variation-settings: normal) {
+    body {
+        font-family: 'Hanken Grotestk VF', sans-serif;
+    }
+    p {
+        font-variation-settings: "wght" 500;
+    }
+
+    .bold {
+        font-variation-settings: "wght" 700;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .bold:hover {
+        font-variation-settings: "wght" 500;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .extra-bold {
+        font-variation-settings: "wght" 800;
+    }
+
+    button > p:hover {
+        font-variation-settings: "wght" 700;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button > p {
+        font-variation-settings: "wght" 500;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+/*Gradients*/
+.card-gradient {
+    background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+}
+.circle-gradient {
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
+}
+
+/*Text Colors*/
+.dark-grey-blue {
+    color: hsl(224, 30%, 27%)
+}
+.light-grey-blue {
+    color: hsl(224, 30%, 27%, 30%)
+}
+
+/*Item Colors*/
+.reaction-bgColor {
+    background-color: hsla(0, 100%, 67%, 5%);
+}
+.memory-bgColor {
+    background-color: hsla(39, 100%, 56%, 5%);
+}
+.verbal-bgColor {
+    background-color: hsla(166, 100%, 37%, 5%);
+}
+.visual-bgColor {
+    background-color: hsla(234, 100%, 45%, 5%);
+}
+.reaction-color {
+    color: hsl(0, 100%, 67%) ;
+}
+.memory-color {
+    color: hsl(39, 100%, 56%);
+}
+.verbal-color {
+    color: hsl(166, 100%, 37%);
+}
+.visual-color {
+    color: hsl(234, 100%, 45%);
+}
+
+/*Animations*/
+.fly {
+    animation: fly-animation ease-in .6s;
+}
+
+@keyframes fly-animation {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.summary-item img {
+    transition: all 0.3s ease-in-out;
+}
+
+.summary-item:hover img {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+
